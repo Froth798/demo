@@ -1,0 +1,76 @@
+.title_h2 {
+  font-size: 0.48rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+main .main-nav.active {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+main .hc_block_1.active-margin {
+  margin-top: 60px;
+}
+main .main-nav {
+  box-shadow: 0px 1px 40px 0px rgba(0, 62, 153, 0.15);
+  background-color: #fff;
+}
+main .main-nav ul {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+main .main-nav ul li {
+  display: flex;
+  width: 2.26rem;
+  height: 60px;
+  line-height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+main .main-nav ul li:last-of-type a::after {
+  display: none;
+}
+main .main-nav ul li a {
+  position: relative;
+  width: 100%;
+  height: 18px;
+  line-height: 18px;
+  font-size: 0.18rem;
+  text-align: center;
+}
+main .main-nav ul li a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #13558A;
+}
+@media screen and (max-width: 1024px) {
+  .title_h2 {
+    font-size: 22px;
+  }
+  main .main-nav.active {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  main .main-nav ul {
+    width: 96%;
+  }
+  main .main-nav ul li {
+    width: 90px;
+  }
+  main .main-nav ul li a {
+    font-size: 12px;
+  }
+}

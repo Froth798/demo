@@ -1,0 +1,625 @@
+//@max-w:1400px;
+body {
+    min-width: 360px;
+}
+*{
+    font-family: "microsoft yahei","simhei",Arial,sans-serif;
+}
+html {
+    font-size: 100px;
+}
+
+// 搜索框
+@media screen and (max-width:1400px) {
+    // .max-nav .nav-top .Search_box form input {
+    //     //width: 1400px;
+    // }
+}
+
+@media screen and (min-width:1024px) {
+    .min-nav {
+        display: none;
+    }
+
+    .max {
+        max-width: 1400px;
+    }
+
+    // 导航
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .max-nav.hover-bg{
+        background-color: #fff;
+    }
+    .max-nav.top-bg{
+        background-color: #fff !important;
+    }
+    .max-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .3s;
+
+        .nav-top .navbar ul li a.col{
+            color: #333;
+        }
+        // 导航字体颜色
+        &:hover .nav-top .navbar ul li a {
+            color: #333;
+        }
+
+        // 搜索框边框颜色
+        .container .Search_box form input.col-bor{
+            border: 2px solid rgba(0, 29, 58, 0.29);
+        }
+
+        .nav-top {
+            position: relative;
+            display: flex;
+            height: 75px;
+            line-height: 75px;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            .logo {
+                max-width: 133px;
+            }
+
+            .logo a {
+                display: block;
+
+                .logo2 {
+                    display: none;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .navbar {
+                width: 100%;
+
+                .navbar-ul {
+                    display: flex;
+                    justify-content: flex-start;
+                    padding-left: 0.44rem;
+
+                    >li {
+                        padding: 0 0.28rem;
+                        position: relative;
+                        height: 75px;
+                        line-height: 75px;
+                    }
+
+                    li {
+                        // 导航条蓝条
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: block;
+                            content: '';
+                            width: 0px;
+                            height: 4px;
+                            background: #13558A;
+                            transition: all .4s;
+                        }
+
+                        &:hover:after {
+                            width: 60%
+                        }
+
+                        a {
+                            display: block;
+                            flex-wrap: nowrap;
+                            font-size: 0.18rem;
+                            color: #fff;
+
+                            &:hover {
+                                color: #13558A;
+                            }
+                        }
+
+                        // 二级导航
+                        .nav-sub {
+                            position: fixed;
+                            display: none;
+                            width: 100%;
+                            height: 60px;
+                            line-height: 60px;
+                            left: 0;
+                            background-color: #fff;
+                            border-top: 1px solid #dfdede;
+
+                            ul {
+                                display: flex;
+                                justify-content: center;
+
+                                li {
+                                    position: relative;
+                                    padding: 0 0.30rem;
+
+                                    &:hover:after {
+                                        width: 60%
+                                    }
+
+                                    a {
+                                        font-size: 0.18rem;
+                                        color: #333;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 搜索框
+            .Search_box.Search_box-show {
+                form{
+                    opacity: 1;
+                    input{
+                        width: 3rem;
+                        
+                    }
+                }
+            }
+
+            .Search_box {
+                position: absolute;
+                right: 24px;
+                display: flex;
+                margin-right: 15px;
+                form {
+                    position: relative;
+                    display: flex;
+                    opacity: 0;
+                    transition: all .8s;
+                    input {
+                        width: 50px;
+                        height: 34px;
+                        padding-left: 5px;
+                        border: 2px solid rgba(255, 255, 255, 0.8);
+                        border-radius: 34px;
+                        background: transparent;
+                        font-size: 16px;
+                        transition: all .8s;
+                        
+                    }
+                    a {
+                        position: absolute;
+                        top: 50%;
+                        right: 18px;
+                        transform: translateY(-50%);
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+    
+                        .search2 {
+                            display: none;
+                        }
+    
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                }
+                }
+            }
+
+            // 搜索按钮
+            .search {
+                position: relative;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+                .search-img {
+                    width: 25px;
+                    height: 20px;
+
+                    .search2 {
+                        display: none;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            // 叉号
+            .search_show {
+
+                &::before,
+                &::after {
+                    position: relative;
+                    display: block;
+                    content: '';
+                    width: 25px;
+                    height: 1px;
+                    background-color: #333;
+                }
+
+                &::before {
+                    transform-origin: bottom left;
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    top: 16px;
+                    transform-origin: top left;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+}
+
+// 通用样式
+// 底部导航
+footer {
+    background-color: rgb(0, 44, 82);
+
+    .foot-nav {
+        display: flex;
+        margin: 0 auto;
+        font-size: 14px;
+        color: #f7f8fa;
+        justify-content: space-between;
+        padding-top: 0.8rem;
+        padding-bottom: 0.3rem;
+
+        .foot-left {
+            width: calc(100% - 286px);
+            display: flex;
+            justify-content: space-between;
+
+            .foot-nav-item {
+                >a {
+                    display: block;
+                    margin-bottom: 0.22rem;
+                    font-size: 0.18rem;
+                    color: #fff;
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 0.22rem;
+
+                        a {
+                            font-size: 0.14rem;
+                            color: rgba(255, 255, 255, 0.6);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .foot-right {
+            width: 286px;
+
+            .site {
+                div {
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 0.17rem;
+                }
+
+                span {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 10px;
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .addr {
+                    display: flex;
+                    font-size: 0.12rem;
+                    color: rgba(255, 255, 255, 0.6);
+                }
+            }
+
+            .vx-img {
+                width: 100px;
+                margin: 0 auto;
+                padding-top: 0.2rem;
+
+                p {
+                    margin-top: 10px;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-align: center;
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .foot-ref {
+        max-width: 1400px;
+        margin: 0 auto;
+        border-top: 1px solid rgba(255, 255, 255, 0.52);
+        padding: 40px 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.12rem;
+
+        p {
+            line-height: 24px;
+            padding: 0 20px;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .max-nav {
+        display: none;
+    }
+
+    // 导航
+    .container {
+        max-width: 960px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        box-sizing: border-box;
+    }
+
+    .min-nav.hover-bg{
+        background-color: #fff;
+        .container{
+            .nav-btn{
+                span{
+                    background-color: #333;
+                }
+            }
+            
+        }
+    }
+    .min-nav.click-bg{
+        background-color: #fff;
+    }
+    .min-nav.top-bg{
+        background-color: #fff;
+    }
+    .min-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        transition: all .3s;
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        .min-nav-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                width: 133px;
+                height: 60px;
+
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    .logo2 {
+                        display: none;
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            // 小屏按钮
+            .nav-btn.active {
+                .nav-btn-Topline {
+                    transform-origin: bottom left;
+                    transform: rotate(45deg);
+                }
+
+                .nav-btn-mainline {
+                    opacity: 0;
+                }
+
+                .nav-btn-bottonline {
+                    transform-origin: top left;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            .nav-btn {
+                width: 26px;
+                height: 22px;
+                cursor: pointer;
+                span.span-bg-click{
+                    background-color: #333;
+                }
+                span.span-bg-top{
+                    background-color: #333;
+                }
+                span {
+                    display: block;
+                    width: 26px;
+                    height: 1px;
+                    background-color: #fff;
+                    margin-bottom: 8px;
+                    transition: all .4s;
+                }
+            }
+        }
+
+        .nav-pull-down {
+            display: none;
+            width: 100%;
+            background-color: #fff;
+            >ul {
+                >li {
+                    position: relative;
+                    width: 100%;
+                    float: left;
+                    border-bottom: 1px solid rgba(0, 0, 0, .1);
+                    box-sizing: border-box;
+                    transition: all .5s;
+
+                    >a {
+                        padding: 0 20px;
+                    }
+
+                    >span {
+                        position: absolute;
+                        top: 0px;
+                        right: 20px;
+                        display: block;
+                        width: 11px;
+                        height: 48px;
+                        background: url(../img/nav-jt.png)no-repeat center center/11px 11px;
+                        transition: all .5s;
+                    }
+
+                    >span.rot {
+                        transform: rotate(90deg);
+                    }
+
+                    .down-ul-sub {
+                        display: none;
+                        width: 100%;
+                        margin-top: 49px;
+                        padding: 7px 20px 8px 20px;
+                        background: #f7f8fa;
+                        box-sizing: border-box;
+
+                        li {
+                            height: 35px;
+                            line-height: 35px;
+
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 35px;
+                                line-height: 35px;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    a {
+                        display: block;
+                        float: left;
+                        height: 48px;
+                        line-height: 48px;
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                }
+
+                .searchPh {
+                    position: relative;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+
+                    input {
+                        width: 100%;
+                        height: 35px;
+                        line-height: 35px;
+                        padding-left: 30px;
+                        margin: 20px;
+                        border: 2px solid rgba(0, 0, 0, .1);
+                        border-radius: 35px;
+                        box-sizing: border-box;
+                        font-size: 14px;
+                        color: #333;
+                    }
+
+                    a {
+                        position: absolute;
+                        right: 25px;
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 10px;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 底部导航
+    .max {
+        max-width: 900px;
+    }
+
+    footer {
+        padding-left: 0.61rem;
+        padding-right: 0.61rem;
+
+        .foot-nav {
+            display: block;
+
+            .foot-left {
+                width: 100%;
+            }
+
+            .foot-right .vx-img {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:641px) {
+    footer {
+        .foot-nav {
+            .foot-left {
+                width: 100%;
+                flex-wrap: wrap;
+
+                .foot-nav-item {
+                    width: calc((100% - 0.61rem)/3);
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

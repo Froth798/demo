@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS reset*/
+*{ margin: 0; padding: 0; }
+ul,li,h1,h2,h3,h4,h5,h6,dl,dt,dd,caption,article,section,aside,header,footer,{display:block;}
+a{text-decoration:none;}
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+address, caption, cite, code, dfn, em, strong, th, var, optgroup { font-style: inherit; font-weight: inherit; }
+del, ins { text-decoration: none; }
+li { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; font-variant: normal; }
+sup { vertical-align: baseline; }
+sub { vertical-align: baseline; }
+legend { color: #000; }
+input, button, textarea, select, optgroup, option { font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit; }
+input, button, textarea, select { *font-size:100%;}
+input, button, select { border: 0 none; outline: 0 none; }
+a { color: black; outline: 0 none; text-decoration: none; cursor: pointer; }
+a:hover { text-decoration: none; }
+* { outline: 0 none; }
+button { background: #FFF; }
+
+/*IE9 兼容HTML5 新标签*/
+header,footer,main,nav,section,article,aside{
+	display: block;
+}
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.pr { position: relative; }
+.pa { position: absolute; }
+/*.abs-right{position:absolute;right:0}*/
+.par { position: absolute; right: 10px; top: 10px }
+.pab { position: absolute; bottom: 0; }
+.zoom { zoom: 1; }
+.hidden { visibility: hidden; }
+.none { display: none; }
+.block { display: block; }
+.ib { display: inline-block; }
+
+/*单行溢出省略*/
+.ellipsis{	
+	white-space:nowrap; /* 1.强制一行内显示文本 */	
+	overflow:hidden; /* 2.溢出部分隐藏 */
+	text-overflow:ellipsis; /* 3.溢出的文字用省略号代替 */
+}
+.ellipsis-1{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+/*多行溢出省略*/
+.lines-ellipsis{
+	display:-webkit-box; /* 弹性伸缩盒子模型显示 */
+	-webkit-line-clamp:2; /* 限制在一个块元素显示的文本的行数 */
+	-webkit-box-orient:vertical;/* 设置伸缩盒子对象的子元素的排列方式 */
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+
+/*水平线*/
+hr { border-style: dashed; border-width: 1px 0; }
