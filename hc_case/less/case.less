@@ -1,0 +1,337 @@
+main{
+    // 行业赋能案例
+    .hc_block_1,.hc_block_2{
+        padding: 0.8rem 0 0.3rem;
+        .hc_block_1_content{
+            padding-top: 0.5rem;
+            .hc_block_1_tab{
+                display: flex;
+                width: 90%;
+                max-width: 1400px;
+                margin: 0 auto;
+                justify-content: center;
+                border-bottom: 1px solid rgb(191, 191, 191);
+                li.active{
+                    position: relative;
+                    color: #13558A;
+                    &::after{
+                        display: block;
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        background-color: rgb(19, 85, 138);
+                        position: absolute;
+                        bottom: -2px;
+                        left: 0;
+                    }
+                }
+                li{
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.18rem;
+                    padding: 0 0.4rem;
+                    height: 0.5rem;
+                    min-height: 30px;
+                    margin: 0 0.8rem;
+                    font-size: 0.18rem;
+                    cursor: pointer;
+                }
+            }
+            .hc_block_1_tabcontent{
+                width: 100%;
+                padding-top: 0.5rem;
+                >li.show{
+                    display: flex;
+                }
+                .hc_block_1_tabcontent_lastLi 
+                .hc_block_1_tabcontent_r 
+                .hc_block_1_text 
+                .hc_block_1_tabcontent_data 
+                {
+                    justify-content: space-around;
+                }
+                >li{
+                    flex: 1;
+                    display: none;
+                    >div{
+                        width: 50%;
+                    }
+                    .hc_block_1_tabcontent_l{
+                        overflow: hidden;
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            transition: .5s;
+                        }
+                        &:hover{
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+                    }
+                    .hc_block_1_tabcontent_r{
+                        display: flex;
+                        padding-left: 0.7rem;
+                        box-sizing: border-box;
+                        align-items: center;
+                        .hc_block_1_text{
+                            width: 77%;
+                            >p{
+                                font-size: 0.16rem;
+                                color: #5b5b5b;
+                                line-height: 30px;
+                            }
+                            .hc_block_1_tabcontent_data{
+                                display: flex;
+                                justify-content: space-between;
+                                padding-top: 0.5rem;
+                                margin-bottom: 0.5rem;
+                                li{
+                                    p{
+                                        display: flex;
+                                        align-items: center;
+                                        .hc_block_1self{
+                                            display: flex;
+                                            align-self: flex-end;
+                                        }
+                                        justify-content: center;
+                                    }
+                                    .frist_p{
+                                        font-size: 0.6rem;
+                                        font-weight: bold;
+                                        color: #13558A;
+                                        margin-bottom: 15px;
+                                        span{
+                                            font-size: 0.2rem;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                    .last_p{
+                                        font-size: 0.17rem;
+                                    }
+                                    p{
+                                        font-size: 28px;
+                                    }
+                                }
+                            }
+                            .hc_block_1_tabcontent_textList{
+                                p{
+                                    position: relative;
+                                    font-size: 0.16rem;
+                                    line-height: 30px;
+                                    color: #5b5b5b;
+                                    padding-left: 30px;
+                                    &::before{
+                                        display: block;
+                                        content: '';
+                                        width: 7px;
+                                        height: 7px;
+                                        background-color: rgb(19, 85, 138);
+                                        position: absolute;
+                                        top: 15px;
+                                        left: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 区域产业案例
+    .hc_block_2 
+    .hc_block_1_content
+    .hc_block_1_tabcontent
+    >li .hc_block_1_tabcontent_r{
+        justify-content: flex-end;
+        order: -1;
+        padding-right: 0.7rem;
+        
+    }
+    // 智能工厂案例
+    .hc_blick_3{
+        padding-top: 0.8rem;
+        padding-bottom: 1.2rem;
+        background: url(../img/zngc-bg.jpg)no-repeat center;
+        background-size: cover;
+        .hc_blick_3_content{
+            padding-top: 0.6rem;
+            width: 90%;
+            max-width: 1600px;
+            margin: 0 auto;
+            h2{
+                color: #fff;
+            }
+            ul{
+                display: flex;
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding-top: 0.6rem;
+                box-sizing: border-box;
+                li{
+                    width: calc((100% - (24px * 3)) / 3);
+                    height: 6.54rem;
+                    min-height: 400px;
+                    margin: 0 12px;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    .hc_blick_3_img{
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 2.56rem;
+                            min-height: 160px;
+                            object-fit: cover;
+                            border-radius: 10px 10px 0 0;
+                        }
+                    }
+                    .hc_blick_3_title {
+                        padding: 0.6rem 0.4rem 0;
+                        h3{
+                            font-size: 0.24rem;
+                            font-weight: bold;
+                            padding-bottom: 0.3rem;
+                            border-bottom: 1px solid rgb(125, 125, 125);
+                        }
+                    }
+                    .hc_blick_3_text{
+                        padding: 0.3rem 0.4rem 0;
+                        p{position: relative;
+                            line-height: 30px;
+                            color: rgb(91, 91, 91);
+                            font-size: 0.16rem;
+                            padding-left: 20px;
+                            &::before{
+                                display: block;
+                                content: '';
+                                width: 7px;
+                                height: 7px;
+                                background-color: rgb(19, 85, 138);
+                                position: absolute;
+                                left: 0;
+                                top: 15px;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1400px){
+    // 行业赋能案例
+    main .hc_block_1,main .hc_block_2{
+        .hc_block_1_content{
+            .hc_block_1_tabcontent{
+                li{
+                    .hc_block_1_tabcontent_r{
+                        .hc_block_1_text{
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    main .hc_block_1,main .hc_block_2{
+        padding: 32px 0 12px;
+        .hc_block_1_content{
+            .hc_block_1_tabcontent{
+                padding-top: 20px;
+                li{
+                    flex-wrap: wrap;
+                    >div{
+                        width: 100%;
+                    }
+                    .hc_block_1_tabcontent_l{
+                        
+                        img{height: 260px;
+                            margin-bottom: 20px;
+                            object-fit: cover;
+                        }
+                    }
+                    .hc_block_1_tabcontent_r{
+                        order: 1;
+                        justify-content: center;
+                        .hc_block_1_text{
+                            p{
+                                font-size: 14px;
+                            }
+                            .hc_block_1_tabcontent_data{
+                                li{
+                                    .frist_p{
+                                        font-size: 24px;
+                                        .hc_block_1self{
+                                            font-size: 12px;
+                                        }
+                                    }
+                                    .last_p{
+                                        font-size: 12px;
+                                    }
+                                } 
+                            }
+                            .hc_block_1_tabcontent_textList{
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    main{
+        // 区域产业案例
+        .hc_block_2 
+        .hc_block_1_content
+        .hc_block_1_tabcontent{
+            padding: 20px 0 40px;
+        }
+        // // 智能工厂案例
+        .hc_blick_3{
+            padding-top: 30px;
+            padding-bottom: 48px;
+            .hc_blick_3_content{
+                padding: 0;
+                ul{
+                    flex-wrap: wrap;
+                    li{
+                        width: calc((100% - (24px * 2)) / 2);
+                        margin-bottom: 20px;
+                        .hc_blick_3_text{
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:640px){
+    main{
+        // // 智能工厂案例
+        .hc_blick_3{
+            .hc_blick_3_content{
+                padding: 0;
+                ul{
+                    flex-wrap: wrap;
+                    li{
+                        width:100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
