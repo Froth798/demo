@@ -1,0 +1,766 @@
+// banner
+.banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .banner-mp4 {
+        video,img {
+            //display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: none;
+        }
+        img{
+            display: none;
+        }
+    }
+    .banner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        h2{
+            font-weight: bold;
+            font-size: 0.61rem;
+            margin-bottom: 0.45rem;
+            visibility: hidden;
+        }
+        p{
+            font-size: 0.26rem;
+        }
+    }
+}
+
+main{
+    // 公司简介
+    .blurb{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0.88rem 0;
+        .blurb-content{
+            display: flex;
+            width: 95%;
+            justify-content: flex-end;
+            max-width: 1600px;
+            .blurb-text{
+                width: 6.9rem;
+                padding: 30px 0.7rem 0 0;
+                color: #5b5b5b;
+                h3{
+                    line-height: 0.42rem;
+                    font-weight: bold;
+                    font-size: 0.42rem;
+                    color: #333333;
+                }
+                p{
+                    width: 6.9rem;
+                    line-height: 30px;
+                    font-size: 16px;
+                    &:first-of-type{
+                        margin-top: 20px;
+                    }
+                    &:last-of-type{
+                        margin-bottom: 20px;
+                    }
+                }
+                a{
+                    display: block;
+                    width: 1.74rem;
+                    height: 54px;
+                    line-height: 54px;
+                    text-align: center;
+                    border: 1px solid #5b5b5b;;
+                    font-size: 0.16rem;
+                    &:hover{
+                        border-color: #13558A;
+                        color: #13558A;
+                    }
+                }
+            }
+            .blurb-img{
+                overflow: hidden;
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    transition: all .5s;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .product{
+        position: relative;
+        h3{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.44rem;
+            font-weight: bold;
+            z-index: 10;
+            color: #fff;
+        }
+        .product-content{
+            position: relative;
+            display: flex;
+            .active{
+                width: 45%;
+                >h4{
+                    opacity: 0;
+                }
+                .icon{
+                    display: none;
+                }
+                .details{
+                    bottom: 0;
+                }
+            }
+            >li{
+                position: relative;
+                width: calc(100% / 3);
+                transition: all .4s;
+                z-index: 4;
+                overflow: hidden;
+                &:first-of-type{
+                    background: url(../img/block2-1.jpg)no-repeat center/cover;
+                }
+                &:nth-of-type(2){
+                    background: url(../img/block2-2.jpg)no-repeat center/cover;
+                }
+                &:last-of-type{
+                    background: url(../img/block2-3.jpg)no-repeat center/cover;
+                }
+                >h4{
+                    position: absolute;
+                    top: 40%;
+                    left: 50%;
+                    transform: translate(-40%,-50%);
+                    flex-wrap: nowrap;
+                    font-size: 0.36rem;
+                    color: #fff;
+                    font-weight: bold;
+                    transition: .4s;
+                    z-index: 2;
+                }
+                .bg-img{
+                    position: relative;
+                    width:100%;
+                    height: 8.6rem;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .details{
+                    position: absolute;
+                    bottom: -50%;
+                    width: 100%;
+                    height: 50%;
+                    background-color: #fff;
+                    opacity: 0.8;
+                    z-index: 2;
+                    transition: all .4s;
+                    .details-text{
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 61%;
+                        padding-top: 6%;
+                        box-sizing: border-box;
+                        h4{
+                            margin-bottom: 0.2rem;
+                            font-size: 0.38rem;
+                            font-weight: bold;
+                            color: #333333;
+                        }
+                        p{
+                            font-size: 0.20rem;
+                            color: #444343;
+                            margin-bottom: 6px;
+                        }
+                        .first-ul{
+                            display: flex;
+                            flex-wrap: wrap;
+                            li{
+                                width: calc((100% - 26px ) / 2);
+                                &:nth-of-type(2n){
+                                    margin-left: -20px;
+                                }
+                            }
+                        }
+                        >ul{
+                            margin-top: 0.26rem;
+                            >li{
+                                list-style: disc;
+                                font-size: 12px;
+                                color: #5b5b5b;
+                                margin-bottom: 15px;
+                                margin-left: 13px;
+                            }
+                            margin-bottom: 0.15rem;
+                        }
+                        a{
+                            display: block;
+                            font-size: 12px;
+                            color: #5b5b5b;
+                            &:hover{
+                                color: #13558A;
+                            }
+                            &:hover .jt-icon{
+                                background: url(../img/block2-icon4.png)no-repeat center center;
+                            }
+                            span{
+                                display: inline-block;
+                            }
+                            .jt-icon{
+                                width: 19px;
+                                height: 9px;
+                                margin-left: 10px;
+                                background: url(../img/block2-icon2.png)no-repeat center center;
+                                img{
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .icon{
+                    position: absolute;
+                    bottom: 2%;
+                    left: 50%;
+                    transform:translateX(-50%);
+                    img{
+                        width: 0.7rem;
+                    }
+                }
+            }
+        }
+        .Mask{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #444343;
+            opacity: .3;
+        }
+    }
+    //业务成果
+    .business{
+        padding: 0.9rem 0.1rem;
+        h2{
+            text-align: center;
+            font-size: 0.48rem;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+        }
+        .business_nav_box{
+            position: relative;
+            .business-nav{
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 10px;
+                font-size: 0.16rem;
+                overflow-x: auto;
+                transition: all .4s;
+                >li.active{
+                    .trade-img{
+                        img{
+                            &:first-child{
+                                opacity: 0;
+                            }
+                            &:last-child{
+                                opacity: 1;
+                            }
+                        }
+                        
+                    }
+                }
+                >li{ 
+                    margin-right: 15px;
+                    cursor: pointer;
+                    .trade-img{
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-width: 80px;
+                        min-height: 80px;
+                        width: 1.26rem;
+                        height: 1.26rem;
+                        box-shadow: 0px 1px 0.4rem 0px rgb(0 62 153 / 15%);
+                        margin-bottom: 0.25rem;
+                        border-radius: 10px;
+                        img{
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            display: block;
+                            min-height: 30px;
+                            height: 0.57rem;
+                            transition: all .4s;
+                            &:last-child{
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    span{
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+            >span{
+                display: none;
+                position: absolute;
+                width: 40px;
+                line-height: 40px;
+                width: 23px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                font-size: 21px;
+                text-align: center;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            .business_btn_left{
+                left: 0;
+            }
+            .business_btn_right{
+                right: 0;
+            }
+        }
+        .trade-content{
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 0.6rem;
+            >li.show{
+                display: flex;
+            }
+            >li{
+                display: none;
+                div{
+                    width: calc(100% / 2);
+                }
+                .trade-left{
+                    p{
+                        width: 84%;
+                        font-size: 18px;
+                        line-height: 36px;
+                        color: #5b5b5b;
+                        margin-bottom: 0.4rem;
+                    }
+                    ul{
+                        width: 84%;
+                        li{
+                            display: flex;
+                            position: relative;
+                            line-height: 30px;
+                            margin-bottom: 10px;
+                            padding-left: 30px;
+                            box-sizing: border-box;
+                            &::before{
+                                position: absolute;
+                                display: inline-block;
+                                min-width: 7px;
+                                min-height: 7px;
+                                content: '';
+                                background-color: rgb(19, 85, 138);
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                            }
+                            a{
+                                font-size: 14px;
+                            }
+                        }
+                        margin-bottom: 0.35rem;
+                    }
+                    >a{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 2rem;
+                        height: 0.56rem;
+                        min-width: 100px;
+                        min-height: 35px;
+                        font-size: 0.18rem;
+                        border: 1px solid #64717e;
+                        text-align: center;
+                        &:hover{
+                            border-color: #13558A;
+                            color: #13558A;
+                        }
+                    }
+                }
+                .trade-right{
+                    display: flex;
+                    flex: 1;
+                    img{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    // 海创视角
+    .case{
+        padding: 1rem 0 2rem;
+        .case-content{
+            h2{
+                font-size: 0.48rem;
+                color: #333333;
+                font-weight: bold;
+                text-align: center;
+            }
+            .case-container{
+                display: flex;
+                width: 90%;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding-top: 1rem;
+                .case-left{
+                    display: flex;
+                    a{
+                        position: relative;
+                        display: block;
+                        width: 530px;
+                        height: 360px;
+                        overflow: hidden;
+                        &:hover img{
+                            transform: scale(1.05);
+                        }
+                        >img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            transition: all .5s;
+                        }
+                        .case-left-text{
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            height: 70px;
+                            padding: 0 30px;
+                            padding-top: 6px;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            box-sizing: border-box;
+                            p{
+                                font-size: 18px;
+                                color: #fff;
+                                font-weight: bold;
+                            }
+                            span{
+                                display: flex;
+                                height: 30px;
+                                align-items: center;
+                                img{
+                                    display: block;
+                                    width: 19px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .case-right{
+                    display: flex;
+                    padding-left: 20px;
+                    box-sizing: border-box;
+                    flex-wrap: wrap;
+                    a{
+                        display: flex;
+                        width: 50%;
+                        padding:0 24px;
+                        box-sizing: border-box;
+                        margin-bottom: 80px;
+                        &:hover .case-itembox-text p:first-child{
+                            color:#13558A ;
+                            
+                        }
+                        .case-itembox-num{
+                            width: 0.7rem;
+                            min-width: 40px;
+                            p{
+                                font-size: 0.48rem;
+                                line-height: 56px;
+                                color: rgb(19, 85, 138);
+                                font-weight: bold;
+                            }
+                            span{
+                                display: block;
+                                font-size: 14px;
+                                color: #333333;
+                                font-weight: bold;
+                            }
+                        }
+                        .case-itembox-text{
+                            flex: 1;
+                            p:first-child{
+                                font-size: 20px;
+                                color: rgb(0, 0, 0);
+                                font-weight: bold;
+                                max-height: 60px;
+                                margin-bottom: 20px;
+                            }
+                            p:last-child{
+                                line-height: 30px;
+                                color: #5b5b5b;
+                                max-height: 60px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .case-more{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2rem;
+            height: 0.56rem;
+            min-width: 100px;
+            min-height: 35px;
+            margin: 0.3rem auto 0 auto;
+            font-size: 0.18rem;
+            border: 1px solid #64717e;
+            text-align: center;
+            &:hover{
+                border-color: #13558A;
+                color: #13558A;
+            }
+        }
+    }
+    
+} 
+@media screen and (max-width:1300px){
+    main {
+        // 海创视角
+        .case{
+            .case-content{
+                .case-container{
+                    display: block;
+                    .case-left{
+                        justify-content: center;
+                        margin-bottom: 50px;
+                    }
+                    .case-right{
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1400px){
+    main{
+        .product{
+            .product-content{
+                >li{
+                    &:nth-of-type(2) .details .details-text ul{
+                        display: flex;
+                        flex-wrap: wrap;
+                        li{
+                            width: calc((100% - 26px ) / 2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px) {
+    // banner
+    .banner{
+        .banner-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            h2{
+                font-weight: bold;
+                font-size: 28px;
+                margin-bottom: 20px;
+                visibility: hidden;
+            }
+            p{
+                font-size:12px;
+            }
+        }
+    }
+    // 公司简介
+    main{
+        .blurb{
+            padding: 40px 0;
+            .blurb-content{
+                width: 90%;
+                margin: 0 auto;
+                .blurb-text{
+                    padding: 0;
+                    width: 100%;
+                    h3{
+                        font-size: 22px;
+                        height: 22px;
+                        line-height: 22px;
+                    }
+                    p{
+                        width: 100%;
+                    }
+                    a{
+                        width: 89px;
+                        height: 33px;
+                        line-height: 33px;
+                        font-size: 12px;
+                    }
+                }
+                .blurb-img{
+                    display: none;
+                }
+            }
+        }
+        // 产品与服务
+        .product{
+            .product-content{
+                .active{
+                    width: 45%;
+                }
+                >li{
+                    height: 432px;
+                    .bg-img{
+                        height:100%;
+                    }
+                    .details{
+                        height: 58%;
+                        bottom: -58%;
+                    }
+                }
+            }
+        }
+        // 业务成果
+        .business{
+            .trade-content{
+                >li{
+                    .trade-left{
+                        p,ul{
+                            width: 100%;
+                        }
+                    }
+                    .trade-right{
+                        order: -1;
+                        flex: none;
+                        img{
+                            height: 320px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .show{
+                    flex-wrap: wrap;
+                    div{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:860px){
+    main .business .business_nav_box > span{
+        display: block;
+    }
+}
+
+@media screen and (max-width:640px){
+    main{
+         // 产品与服务
+        .product{
+            h3{
+                position: relative;
+                color: #333333;
+                font-size: 22px;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+            .product-content{
+                flex-wrap: wrap;
+                .active{
+                    width: 100%;
+                }
+                >li{
+                    width: 100%;
+                    height: 280px;
+                    h4{
+                        font-size: 18px;
+                    }
+                    .bg-img{
+                        height:100%;
+                    }
+                    .details{
+                        height: 100%;
+                        bottom: -100%;
+                        align-items: center;
+                        .details-text{
+                            padding-top: 8%;
+                        }
+                    }
+                }
+            }
+        }
+         // 海创视角
+        .case{
+            .case-content{
+                .case-container{
+                    display: block;
+                    .case-left{
+                        justify-content: center;
+                        margin-bottom: 50px;
+                    }
+                    .case-right{
+                        padding-left: 0;
+                        a{
+                            width: 100%;
+                            margin-bottom: 30px;
+                            .case-itembox-num{
+                                font-size: 24px;
+                                span{
+                                    font-size: 12px;
+                                }
+                            }
+                            .case-itembox-text{
+                                p:first-child{
+                                    font-size: 20px;
+                                }
+                                p:last-child{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
